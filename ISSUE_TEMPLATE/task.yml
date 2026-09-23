@@ -1,0 +1,28 @@
+name: Tarea técnica
+description: Mantenimiento, deuda, infraestructura o una subtarea de un issue más grande.
+type: Task
+projects: ["angouhq/1"]
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      value: |
+        - [ ] <resultado verificable>
+    validations:
+      required: true
+  - type: textarea
+    id: riesgos
+    attributes:
+      label: Riesgos
+  - type: input
+    id: bloqueado
+    attributes:
+      label: Bloqueado por
+      placeholder: "angouhq/<repo>#N"

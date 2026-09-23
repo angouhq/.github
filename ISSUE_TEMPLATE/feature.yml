@@ -1,0 +1,47 @@
+name: Feature
+description: Algo nuevo, o una mejora de algo que existe.
+type: Feature
+projects: ["angouhq/1"]
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Dónde vive, para quién es y por qué importa.
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Qué falta hoy y a quién le afecta.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Verificables, con al menos un caso de fallo.
+      value: |
+        - [ ] Dado <estado>, cuando <acción>, entonces <resultado observable>.
+        - [ ] Caso de fallo: <entrada inválida, sin permiso, otro tenant o proveedor caído> -> <qué pasa>.
+    validations:
+      required: true
+  - type: textarea
+    id: fuera
+    attributes:
+      label: Fuera de alcance
+  - type: textarea
+    id: riesgos
+    attributes:
+      label: Riesgos
+      description: Datos, tenants, pagos, migraciones, contratos de API o despliegue.
+  - type: textarea
+    id: probar
+    attributes:
+      label: Cómo probar
+  - type: input
+    id: bloqueado
+    attributes:
+      label: Bloqueado por
+      placeholder: "angouhq/<repo>#N"

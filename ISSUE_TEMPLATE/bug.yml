@@ -1,0 +1,38 @@
+name: Bug
+description: Algo no funciona como debería.
+type: Bug
+projects: ["angouhq/1"]
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Dónde está, desde cuándo y por qué importa. Tres líneas o menos.
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Pasos para reproducir, resultado esperado, resultado obtenido y entorno.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Verificables. Uno de ellos es la prueba de regresión.
+      value: |
+        - [ ] Dado <estado>, cuando <acción>, entonces <resultado observable>.
+        - [ ] Prueba de regresión que falla antes del fix y pasa después.
+    validations:
+      required: true
+  - type: textarea
+    id: probar
+    attributes:
+      label: Cómo probar
+  - type: input
+    id: bloqueado
+    attributes:
+      label: Bloqueado por
+      placeholder: "angouhq/<repo>#N"
